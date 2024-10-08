@@ -13,7 +13,7 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
-  			background: 'hsl(var(--background))',
+  			background: '#FBF4F4',
   			foreground: 'hsl(var(--foreground))',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
@@ -52,8 +52,23 @@ export default {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
-  		}
+  			},
+				orangebase: '#F24D0D',
+				orangedark: '#C43C08',
+				bluelight: '#D7EFF9',
+				bluebase: '#5EC5FD',
+				bluedark: '#009CF0',
+				shape: '#F5EAEA',
+				danger: '#DC3545',
+				success: '#28A745',
+				gray: {
+					100: '#ADADAD',
+					200: '#949494',
+					300: '#666666',
+					400: '#3D3D3D',
+					500: '#1D1D1D',
+				},
+  		},
   	}
   },
   plugins: [require("tailwindcss-animate")],
