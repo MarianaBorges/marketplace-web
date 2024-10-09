@@ -69,6 +69,10 @@ export default {
 					500: '#1D1D1D',
 				},
   		},
+			fontFamily: {
+        poppins: 'Poppins, sans-serif', 
+				dmsans: 'DM Sans, sans-serif;'
+      }
   	}
   },
   plugins: [require("tailwindcss-animate")],
