@@ -5,9 +5,10 @@ import Input from "./input";
 
 interface PasswordInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
+  register?: any;
 }
 
-export default function PasswordInput({ label = 'Senha', ...rest }: PasswordInputProps) {
+export default function PasswordInput({ register = null, label = 'Senha', ...rest }: PasswordInputProps) {
   return (
       <Input 
         {...rest}
@@ -16,6 +17,7 @@ export default function PasswordInput({ label = 'Senha', ...rest }: PasswordInpu
         placeholder="Sua senha de acesso" 
         LeftIcon={RiLockPasswordLine}
         RightIcon={HiEye}
+        register={register}
       />
   )
 }

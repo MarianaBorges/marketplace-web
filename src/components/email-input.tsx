@@ -1,9 +1,11 @@
 import { HiOutlineMail } from "react-icons/hi";
 import Input from "./input";
 
-interface EmailInputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
+interface EmailInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  register?: any;
+}
 
-export default function EmailInput({ ...rest }: EmailInputProps) {
+export default function EmailInput({ register = null, ...rest }: EmailInputProps) {
   return (
       <Input 
         {...rest}
@@ -11,6 +13,7 @@ export default function EmailInput({ ...rest }: EmailInputProps) {
         label="E-mail" 
         placeholder="Seu e-mail cadastrado" 
         LeftIcon={HiOutlineMail}
+        register={register}
       />
   )
 }
