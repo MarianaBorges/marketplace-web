@@ -46,34 +46,36 @@ export default function SignIn(){
   }
 
   return (
-    <div className="bg-white flex-1 p-20 rounded-lg">
-      <div className="flex h-full flex-col justify-between">
-        <div>
-          <PageTitle 
-            title='Acesse sua conta' 
-            subTitle='Informe seu e-mail e senha para entrar'
-            />
+    <div className="flex w-full h-full">
+      <div className="bg-white flex-1 p-20 rounded-lg">
+        <div className="flex h-full flex-col justify-between">
+          <div>
+            <PageTitle 
+              title='Acesse sua conta' 
+              subTitle='Informe seu e-mail e senha para entrar'
+              />
 
-          <form  onSubmit={handleSubmit(onSubmit)} className="mt-12">
-            <EmailInput register={register('email')}/>
-            <PasswordInput register={register('password')} />
+            <form  onSubmit={handleSubmit(onSubmit)} className="mt-12">
+              <EmailInput register={register('email')}/>
+              <PasswordInput register={register('password')} />
 
-            <Button type="submit" className="w-full mt-12 p-5 rounded-md flex justify-between " variant='orange'>
-              <span className="font-poppins text-base font-medium">Acessar</span> 
-              <MdArrowRightAlt className="w-6 h-6 text-white"/>
-            </Button>      
-          </form>
-        </div>
+              <Button type="submit" className="w-full mt-12 p-5 rounded-md flex justify-between " variant='orange'>
+                <span className="font-poppins text-base font-medium">Acessar</span> 
+                <MdArrowRightAlt className="w-6 h-6 text-white"/>
+              </Button>      
+            </form>
+          </div>
 
-        <div>
-          <span className="font-poppins text-base font-normal text-gray-300">
-            Ainda não tem uma conta?
-          </span>
+          <div>
+            <span className="font-poppins text-base font-normal text-gray-300">
+              Ainda não tem uma conta?
+            </span>
 
-          <Button onClick={() => onSubmit({email: 'mary@gmail.com', password: '123dcfrvgt'})} className="mt-5 w-full p-5 rounded-md flex justify-between" variant='outline'>
-            <span className="font-poppins text-base text-orangebase font-medium">Cadastrar</span> 
-            <MdArrowRightAlt className="w-6 h-6 text-orangebase hover:text-orangedark"/>
-          </Button> 
+            <Button onClick={() => navigate('/sign-up')} className="mt-5 w-full p-5 rounded-md flex justify-between" variant='outline'>
+              <span className="font-poppins text-base text-orangebase font-medium">Cadastrar</span> 
+              <MdArrowRightAlt className="w-6 h-6 text-orangebase hover:text-orangedark"/>
+            </Button> 
+          </div>
         </div>
       </div>
     </div>
