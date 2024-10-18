@@ -30,7 +30,7 @@ export default function SignIn(){
 
   const onSubmit = async ({email, password}: SignInType) => {
     try {
-      const response = await authenticate({email, password})
+      await authenticate({email, password})
       // console.log(response)
       navigate('/app/dashboard')
       toast({
